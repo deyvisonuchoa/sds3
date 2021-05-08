@@ -11,7 +11,7 @@
 	<groupId>br.com.devsuperior</groupId>
 	<artifactId>dsvendas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>dsvendas</name>
 	<description>Projeto desenvolvido na semana spring + react devsuperior 3</description>
 	<properties>
