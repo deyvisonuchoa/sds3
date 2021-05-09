@@ -6,6 +6,8 @@ type PaginationProps = {
     onPageChange: Function
 }
 
+/* eslint-disable */
+
 export default function Pagination( { page, pagesList, onPageChange }: PaginationProps ) {
     return (
         <div className="row d-flex justify-content-center">
