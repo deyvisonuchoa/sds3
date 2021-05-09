@@ -8,6 +8,7 @@ import { BASE_URL } from "Utils/requests";
 export default function Datatable() {
 
     const [activePage, setActivePage] = useState(0);
+    const [pages, setPages] = useState<number[]>([]);
     const [page, setPage] = useState<SalePage>({
         first: true,
         number: 0,
@@ -17,9 +18,16 @@ export default function Datatable() {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/sales?page=${activePage}&size=20&sort=date,desc`)
+        axios.get<SalePage>(`${BASE_URL}/sales?page=${activePage}&size=20&sort=date,desc`)
             .then(res => {
                 setPage(res.data);
+                let i;
+                const pagesList: number[] = [];
+                for(i = 0 ; i < res.data.totalPages; i++){
+                    pagesList.push(i);
+                }
+                console.log(pagesList);
+                setPages(pagesList);
             })
     }, [activePage])
 
@@ -29,7 +37,7 @@ export default function Datatable() {
 
     return (
         <>
-            <Pagination page={page} onPageChange={pageChange}/>
+            <Pagination page={page} pagesList={pages} onPageChange={pageChange}/>
             <div className="table-responsive">
                 <table className="table table-striped table-sm">
                     <thead>
