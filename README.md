@@ -1,10 +1,5 @@
-#### :dollar: DSVendas - Dashboard para analisar resultados de vendas.
+#### DSVendas - Dashboard para analisar resultados de vendas.
 
-<ol align="left">
- <li><strong><a href="#--sobre-o-projeto">Sobre</a></strong></li>
- <li><strong><a href="#--tecnologias">Tecnologias</a></strong></li>
- <li><strong><a href="#--autor">Autor</a></strong></li>
-</ol>
 
 <h1 style="padding: 50px; background: #333333;">
     <img alt="site dsvendas" title="#site dsvendas" src="assets/dashboard.PNG" width=360px/>
@@ -12,7 +7,7 @@
 
 🌎 **Acesse agora:**
 
-<a href="ds3-dsvendas.netlify.app" target="_blank" title="acessar o site"><strong>ds3-dsvendas.netlify.app</strong></a>
+<a href="https://ds3-dsvendas.netlify.app" target="_blank" title="acessar o site"><strong>ds3-dsvendas.netlify.app</strong></a>
 
 <br />
 
@@ -49,10 +44,6 @@ A aplicação consiste em exibir um dashboard a partir de dados fornecidos por u
 - **VSCode**
 - **Intellij Ideia**
 
-
-#### **Hospedagem do site** : <a href="https://vercel.com/" target="_blank" title="acessar o site"><strong>https://vercel.com</strong></a>
-#### **Hospedagem da API** : <a href="https://www.heroku.com" target="_blank" title="acessar o site"><strong>https://www.heroku.com</strong></a>
-
 <br />
 
 ### 💎 Autor
@@ -60,9 +51,10 @@ A aplicação consiste em exibir um dashboard a partir de dados fornecidos por u
 <img style="border-radius: 40px" src="https://avatars.githubusercontent.com/u/56098033?v=4" width="100px;" alt="Deyvison"/>
 <sub><strong>Deyvison Uchoao</strong></sub></a>
 
-<br />
+<br/>
+<br/>
 
 :point_down: Entre em contato.
-<br />
+<br/>
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/biacoelho)](https://www.linkedin.com/in/deyvisonuchoa)
