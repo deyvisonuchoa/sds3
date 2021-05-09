@@ -26,7 +26,6 @@ export default function Datatable() {
                 for(i = 0 ; i < res.data.totalPages; i++){
                     pagesList.push(i);
                 }
-                console.log(pagesList);
                 setPages(pagesList);
             })
     }, [activePage])

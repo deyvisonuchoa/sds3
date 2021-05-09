@@ -10,7 +10,7 @@ export default function Pagination( { page, pagesList, onPageChange }: Paginatio
     return (
         <div className="row d-flex justify-content-center">
             <nav>
-                <ul className="justify-content-center">
+                <ul className="d-flex justify-content-center list-unstyled">
                     <li className={`page-item ${page.first ? 'disabled' : ''}`}>
                         <button className="page-link" onClick={() => onPageChange(page.number - 1)}>Anterior</button>
                     </li>

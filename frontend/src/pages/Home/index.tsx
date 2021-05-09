@@ -1,9 +1,20 @@
+import axios from "axios";
 import Footer from "components/Footer";
 import Header from "components/Header";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "Utils/requests";
 
 
 export default function Home() {
+
+    useEffect( () => {
+        axios.get(`${BASE_URL}/sales/amount`)
+            .then(response => {
+                console.log("Ativando o heroku antes de você clicar, pra otimizar sua experiencia quando tentar acessar o dashboard");
+            })
+    },[])
+
     return (
         <>
             <Header />

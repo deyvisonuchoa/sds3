@@ -1,10 +1,54 @@
+import axios from "axios";
 import BarChart from "components/BarChart";
 import Datatable from "components/DataTable";
 import DonutChart from "components/DonutChart";
 import Footer from "components/Footer";
 import Header from "components/Header";
+import { useEffect, useState } from "react";
+import { BASE_URL } from "Utils/requests";
+import 'pages/Dashboard/styles.css';
 
 export default function Dashboard() {
+
+    const [loading, setLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
+
+    useEffect(() => {
+        axios.get(`${BASE_URL}/sales`)
+            .catch( () => {
+                setHasError(true)
+            })
+            .finally( () => {
+                setLoading(false);
+            })
+    }, [])
+
+
+
+    if (loading) {
+        return (
+            <>
+                <Header />
+                <div className="loading">
+                    <span>Aguarde enquanto nós carregamos os dados pra você 😅</span>
+                 </div>
+                <Footer />
+            </>
+        )
+    }
+
+    if (hasError) {
+        return (
+            <>
+                <Header />
+                <div className="loading">
+                    <span>Ocorreu um erro ao recuperar os dados, tente novamente mais tarde 😢</span>
+                 </div>
+                <Footer />
+            </>
+        )
+    }
+
     return (
         <>
             <Header />
