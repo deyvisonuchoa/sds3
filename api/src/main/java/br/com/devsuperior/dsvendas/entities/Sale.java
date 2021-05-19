@@ -3,7 +3,6 @@ package br.com.devsuperior.dsvendas.entities;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,10 +27,6 @@ public class Sale implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "seller_id")
 	private Seller seller;
-	
-	private Sale() {
-		
-	}
 
 	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date) {
 		super();
@@ -63,7 +58,7 @@ public class Sale implements Serializable{
 	}
 
 	public void setDeals(Integer deals) {
-		deals = deals;
+		this.deals = deals;
 	}
 
 	public Double getAmount() {
